@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+/*  Theme token */
+:root {
+  --bg-app: 222 18% 12%;
+  --bg-sidebar: 222 18% 16%;
+  --bg-card: 222 16% 20%;
+  --border-subtle: 220 14% 28%;
+  --text-primary: 210 40% 96%;
+  --text-muted: 215 20% 65%;
+  --good: 142 60% 45%;
+  --bad: 0 65% 55%;
+  --info: 217 91% 60%;
+  --warn: 38 92% 50%;
+}
+
+
+@layer components {
+    .text-good {
+    color: hsl(var(--good));
+  }
+
+  .text-bad {
+    color: hsl(var(--bad));
+  }
+
+  .text-info {
+    color: hsl(var(--info));
+  }
+
+  .text-warn {
+    color: hsl(var(--warn));
+  }
+  .bg-app {
+    background-color: hsl(var(--bg-app));
+  }
+
+  .bg-sidebar {
+    background-color: hsl(var(--bg-sidebar));
+  }
+
+  .bg-card {
+    background-color: hsl(var(--bg-card));
+  }
+
+  .text-primary {
+    color: hsl(var(--text-primary));
+  }
+
+  .text-muted {
+    color: hsl(var(--text-muted));
+  }
+
+  .border-subtle {
+    border-color: hsl(var(--border-subtle));
+  }
+}
