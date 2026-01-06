@@ -8,7 +8,7 @@ export default function App() {
 
   return (
     <>
-      <AdminLayout>
+      <AdminLayout >
         <ComponentRerender/>
       </AdminLayout>
     </>

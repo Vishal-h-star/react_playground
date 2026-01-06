@@ -1,5 +1,5 @@
 import { useState } from "react";
-import PlaygroundShell from "../../playground/PlaygroundShell";
+import PlaygroundShell from "../../playground/playgroundShell";
 import Card from "../../ui/Card";
 import CardTitle from "../../ui/CardTitle";
 import ToggleButton from "../../ui/ToggleButton";
@@ -60,11 +60,12 @@ function VisualTreeGood({ click, onClicks }) {
 }
 
 export default function ComponentRerender() {
-  //  states 
+  //  states
   const [mode, setMode] = useState("bad");
   const [clicks, setClicks] = useState(0);
-  const { BAD_CODE , BAD_INSIGHT } = playGroundCode[0];
-  const { GOOD_CODE , GOOD_INSIGHT} = playGroundCode[1];
+  const [clicksGood, setClicksGood] = useState(0);
+  const { BAD_CODE, BAD_INSIGHT } = playGroundCode[0];
+  const { GOOD_CODE, GOOD_INSIGHT } = playGroundCode[1];
   //  console.log( BAD_CODE , "kajfklsdjf", GOOD_CODE)
 
   return (
@@ -86,14 +87,19 @@ export default function ComponentRerender() {
         </div>
       }
       bad={
-        mode === "bad" && <VisualTreeBad click={clicks} onClicks={setClicks} />
-      }
-      good={
-        mode === "good" && (
-          <VisualTreeGood click={clicks} onClicks={setClicks} />
+        mode === "bad" ? (
+          <VisualTreeBad click={clicks} onClicks={setClicks} />
+        ) : (
+          <VisualTreeGood click={clicksGood} onClicks={setClicksGood} />
         )
       }
-      insight={ mode === "bad" ? BAD_INSIGHT : GOOD_INSIGHT}
+      mode={mode}
+      // good={
+      //   mode === "good" && (
+      //     <VisualTreeGood click={clicks} onClicks={setClicks} />
+      //   )
+      // }
+      insight={mode === "bad" ? BAD_INSIGHT : GOOD_INSIGHT}
     >
       <CodePanel
         title={mode === "bad" ? "❌ Bad Code" : "✅ Good Code"}
