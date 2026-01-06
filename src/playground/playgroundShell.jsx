@@ -6,10 +6,11 @@ export default function PlaygroundShell({
   controls,
   bad,
   good,
+  mode,
   insight,
   children
 }) {
-
+   console.log(mode)
    const  details = insight?.split('.')
   return (
     <div className="bg-card border border-subtle rounded-xl p-6 space-y-6">
@@ -32,22 +33,25 @@ export default function PlaygroundShell({
       )}
 
       {/* Comparison */}
-      <section className="grid grid-cols-2 gap-4">
+      {/* <section className="grid grid-cols-2 gap-4"> */}
+      <section className="lg:w-xl">
         {/* Bad */}
         <div className="border border-subtle rounded-lg p-4">
           <div className="text-bad font-medium mb-2">
-            ❌ Bad Architecture
+            {mode === "bad" ? "❌ Bad Architecture" : 
+              "✅ Good Architecture"
+            } 
           </div>
           {bad}
         </div>
 
         {/* Good */}
-        <div className="border border-subtle rounded-lg p-4">
+        {/* <div className="border border-subtle rounded-lg p-4">
           <div className="text-good font-medium mb-2">
-            ✅ Good Architecture
+            
           </div>
           {good}
-        </div>
+        </div> */}
       </section>
 
        {children}
