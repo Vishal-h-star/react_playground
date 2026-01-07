@@ -1,11 +1,11 @@
 import { useState } from "react";
-import PlaygroundShell from "../../playground/PlaygroundShell";
 
 import Card from "../../ui/Card";
 import CardTitle from "../../ui/CardTitle";
 import ToggleButton from "../../ui/ToggleButton";
 import CodePanel from "../../ui/CodePanel";
 import { playGroundCode } from "../../assets/playgroundData";
+import PlaygroundShell from "../../playground/PlaygroundShell";
 
 function VisualTreeBad({ click, onClicks }) {
   return (
