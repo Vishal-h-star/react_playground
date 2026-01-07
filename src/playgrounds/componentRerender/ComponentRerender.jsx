@@ -1,5 +1,6 @@
 import { useState } from "react";
-import PlaygroundShell from "../../playground/playgroundShell";
+import PlaygroundShell from "../../playground/PlaygroundShell";
+
 import Card from "../../ui/Card";
 import CardTitle from "../../ui/CardTitle";
 import ToggleButton from "../../ui/ToggleButton";
@@ -71,7 +72,7 @@ export default function ComponentRerender() {
   return (
     <PlaygroundShell
       title="Component Re-renders"
-      description="Understand how state placement affects re-render behavior"
+      description="Understand how state placement affects re-render behavior.  (Component Re-renders = performance effect)"
       controls={
         <div className="flex gap-2">
           <ToggleButton

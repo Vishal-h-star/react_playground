@@ -21,7 +21,7 @@ export default function PlaygroundShell({
           {title}
         </h2>
         <p className="text-muted text-sm">
-          {description}
+           {description}
         </p>
       </header>
 
