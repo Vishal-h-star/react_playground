@@ -1,10 +1,11 @@
 import { useState } from "react";
-import PlaygroundShell from "../../playground/playgroundShell";
+
 import Card from "../../ui/Card";
 import CardTitle from "../../ui/CardTitle";
 import ToggleButton from "../../ui/ToggleButton";
 import CodePanel from "../../ui/CodePanel";
 import { playGroundCode } from "../../assets/playgroundData";
+import PlaygroundShell from "../../playground/PlaygroundShell";
 
 function VisualTreeBad({ click, onClicks }) {
   return (
@@ -71,7 +72,7 @@ export default function ComponentRerender() {
   return (
     <PlaygroundShell
       title="Component Re-renders"
-      description="Understand how state placement affects re-render behavior"
+      description="Understand how state placement affects re-render behavior.  (Component Re-renders = performance effect)"
       controls={
         <div className="flex gap-2">
           <ToggleButton

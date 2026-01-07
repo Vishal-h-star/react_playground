@@ -21,7 +21,7 @@ export default function PlaygroundShell({
           {title}
         </h2>
         <p className="text-muted text-sm">
-          {description}
+           {description}
         </p>
       </header>
 
@@ -58,8 +58,8 @@ export default function PlaygroundShell({
 
       {/* Insight */}
       {details.map( (line , i ) => (
-        <p className="text-muted text-[1rem]  mb-1.5 pl-4">
-            <span> <b>{i+1}.</b> { line}.</span>
+        <p key={i} className="text-muted text-[1rem]  mb-1.5 pl-4">
+            <span > <b>{i+1}.</b> { line}.</span>
         </p> 
       ))}
     </div>
