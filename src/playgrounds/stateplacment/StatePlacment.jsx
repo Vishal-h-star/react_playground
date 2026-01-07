@@ -7,7 +7,7 @@ const StatePlacment = () => {
     //    title="State Placement"
     //    description="Understand where state should live to ensure correct data flow and predictable UI behavior."
     //  />
-      <h1>Hello my name is vishal</h1>
+      <h1>Hello my name is vishal yes</h1>
   )
 }
 
